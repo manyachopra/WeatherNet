@@ -70,3 +70,8 @@ async function getTemp(city){
 searchbutton.addEventListener("click",() =>{
     getTemp(search.value);
 })
+search.addEventListener("keydown",(e)=>{
+    if(e.key==="Enter"){
+        getTemp(search.value.trim());
+    }
+})
